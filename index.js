@@ -18,7 +18,6 @@ const noPromiseMethods = {
   hideNavigationBarLoading: 1,
   drawCanvas: 1,
   canvasToTempFilePath: 1,
-  hideKeyboard: 1,
 };
 
 const labrador = {
@@ -84,6 +83,7 @@ Object.keys(wx).forEach((key) => {
       obj.success = resolve;
       obj.fail = (res) => {
         if (res && res.errMsg) {
+          console.log("promise化 出错:",res)
           reject(new Error(res.errMsg));
         } else {
           reject(res);
