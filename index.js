@@ -18,6 +18,7 @@ const noPromiseMethods = {
   hideNavigationBarLoading: 1,
   drawCanvas: 1,
   canvasToTempFilePath: 1,
+  getUpdateManager:1
 };
 
 const labrador = {
